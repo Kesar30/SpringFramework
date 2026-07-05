@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean class="com.collection.details" name="academy">
+        <property name="name">
+            <value>coaching center</value>
+        </property>
+        <property name="phones">
+            <list>
+                <value>12748367</value>
+                <value>12748367</value>
+                <value>12748367</value>
+                <value>12748367</value>
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>delhi</value>
+                <value>haryana</value>
+                <value>panipat</value>
+                <value>chandigarh</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="python" value="2month" />
+                <entry key="c++" value="2month" />
+                <entry key="java" value="2month" />
+                <entry key="php" value="2month" />
+            </map>
+        </property>
+    </bean>
+
+<!--    <bean class="org.example.Student" name="student1">-->
+<!--        <property name="studentId">-->
+<!--            <value>111</value>-->
+<!--        </property>-->
+<!--        <property name="studentName">-->
+<!--            <value>kesar</value>-->
+<!--        </property>-->
+<!--    </bean>-->
+</beans>
