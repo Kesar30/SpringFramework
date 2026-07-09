@@ -19,10 +19,26 @@
 <!--    <bean class="com.autowire.xml.Emp" name="emp" autowire="constructor"/>-->
 
 <!--    // for annotation-->
+<!--    <bean class="com.autowire.annotation.Address" name="address">-->
+<!--            <property name="city" value="karnal" />-->
+<!--            <property name="state" value="haryana" />-->
+<!--    </bean>-->
+<!--    <bean class="com.autowire.annotation.Emp" name="emp" />-->
+
+<!--    //use of qualifier-->
     <bean class="com.autowire.annotation.Address" name="address">
-            <property name="city" value="karnal" />
-            <property name="state" value="haryana" />
+        <property name="city" value="karnal" />
+        <property name="state" value="haryana" />
     </bean>
+
+    <bean class="com.autowire.annotation.Address" name="address2">
+        <property name="city" value="panipat" />
+        <property name="state" value="haryana" />
+    </bean>
+<!--    //it will confuse which bean should choose and give erroe so we use qualifier-->
     <bean class="com.autowire.annotation.Emp" name="emp" />
+
+
+
 
 </beans>

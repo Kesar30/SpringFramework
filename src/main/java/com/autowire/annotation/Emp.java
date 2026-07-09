@@ -1,10 +1,12 @@
 package com.autowire.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Emp {
     // on property
-//    @Autowired
+    @Autowired
+    @Qualifier("address") //name of the bean
     private Address address;
 
     public Address getAddress() {
@@ -20,7 +22,7 @@ public class Emp {
     public Emp() {
     }
     //on constructor
-    @Autowired
+//    @Autowired
     public Emp(Address address) {
         System.out.println("inside constructor");//byconstructor autowiring
         this.address = address;
