@@ -4,16 +4,25 @@
        xmlns:p="http://www.springframework.org/schema/p" xmlns:value="http://www.springframework.org/schema/c"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+        <context:annotation-config/>
 
-    <bean class="com.autowire.xml.Address" name="address">
-        <property name="city" value="karnal" />
-        <property name="state" value="haryana" />
+    <!--&lt;!&ndash;    //for xml&ndash;&gt;-->
+<!--    <bean class="com.autowire.xml.Address" name="address">-->
+<!--        <property name="city" value="karnal" />-->
+<!--        <property name="state" value="haryana" />-->
+<!--    </bean>-->
+<!--&lt;!&ndash;    // in byName refrence object name must be equal to bean name of that class address = private adrress&ndash;&gt;-->
+<!--    <bean class="com.autowire.xml.Emp" name="emp" autowire="byName"/>-->
+<!--&lt;!&ndash;    // in bytype it will check the Type of the refference object like type  = Address&ndash;&gt;-->
+<!--    <bean class="com.autowire.xml.Emp" name="emp" autowire="byType"/>-->
+<!--&lt;!&ndash;    it will call the constructor&ndash;&gt;-->
+<!--    <bean class="com.autowire.xml.Emp" name="emp" autowire="constructor"/>-->
+
+<!--    // for annotation-->
+    <bean class="com.autowire.annotation.Address" name="address">
+            <property name="city" value="karnal" />
+            <property name="state" value="haryana" />
     </bean>
-<!--    // in byName refrence object name must be equal to bean name of that class address = private adrress-->
-    <bean class="com.autowire.xml.Emp" name="emp" autowire="byName"/>
-<!--    // in bytype it will check the Type of the refference object like type  = Address-->
-    <bean class="com.autowire.xml.Emp" name="emp" autowire="byType"/>
-<!--    it will call the constructor-->
-    <bean class="com.autowire.xml.Emp" name="emp" autowire="constructor"/>
+    <bean class="com.autowire.annotation.Emp" name="emp" />
 
 </beans>
