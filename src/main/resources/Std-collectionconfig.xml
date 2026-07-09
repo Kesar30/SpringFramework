@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+
+    <util:list list-class="java.util.Vector" id="friend">
+        <value>"nayra"</value>
+        <value>nancy</value>
+        <value>nisha</value>
+    </util:list>
+
+    <util:map map-class="java.util.HashMap" id="CF">
+        <entry key="java" value="2000"/>
+        <entry key="python" value="2000"/>
+    </util:map>
+
+    <util:map map-class="java.util.TreeMap" id="CF2">
+        <entry key="java" value="2000"/>
+        <entry key="python" value="2000"/>
+    </util:map>
+
+    <bean name="person1" class="com.collection.Standalone.Person" >
+        <property name="friends" ref="friend"/>
+        <property name="course_fees" ref="CF"/>
+    </bean>
+    <bean name="person2" class="com.collection.Standalone.Person" >
+        <property name="friends" ref="friend"/>
+        <property name="course_fees" ref="CF2"/>
+    </bean>
+
+
+
+</beans>
