@@ -3,6 +3,8 @@ package com.Stereotype;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 //it will create object by class name in small letters like student or you can pass name of the object like @Component("ob")
 public class Student {
@@ -10,6 +12,17 @@ public class Student {
     private String name;
     @Value("20")
     private int age;
+    //collection
+    @Value("#{city}")
+    private List<String> cities;
+
+    public List<String> getCities() {
+        return cities;
+    }
+
+    public void setCities(List<String> cities) {
+        this.cities = cities;
+    }
 
     public String getName() {
         return name;

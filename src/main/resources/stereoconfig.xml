@@ -13,5 +13,10 @@
        http://www.springframework.org/schema/util/spring-util.xsd">
 
         <context:component-scan base-package="com.Stereotype"/>
+        <util:list list-class="java.util.ArrayList" id="city">
+                <value>delhi</value>
+                <value>karnatka</value>
+                <value>kerala</value>
+        </util:list>
 
 </beans>
